@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- get the required files from 3rd party sources -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- use the font -->
+
+
+    <title>Accordion Example</title>
+    <style>
+      /* Style the buttons that are used to open and close the accordion panel */
+      button.accordion {
+        background-color: #f2f2f2;
+        color: #0d0d0d;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        margin-bottom: 5px;
+        border-radius: 5px;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      button.accordion.active,
+      button.accordion:hover {
+        background-color: #d9d9d9;
+      }
+
+
+      button.accordion::before {
+        content: '\002B';  /* Plus symbol */
+        color: #777;
+        float: left;
+        margin-right: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Rotate icon when button is active */
+      button.accordion.active::before {
+        
+        transform: rotate(45deg);
+        content: "\2212";  /* Minus symbol */
+        color: white;
+        float: left;
+        margin-right: 10px;
+      }
+
+      /* Style the accordion panel. Note: hidden by default */
+      div.panel {
+        padding: 0 18px;
+        background-color: #fff;
+        display: none;
+        border-radius: 5px;
+      }
+
+      /* Style the accordion content */
+      .accordion-content {
+        padding: 18px;
+      }
+      
+      /* Set max-width for accordion container */
+      .accordion-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: #1a1a1a;
+        font-family: Roboto Slab, sans-serif;
+        font-size: 25;
+      }
+
+      p,ol,li {
+        color: #1a1a1a;
+        font-family: Roboto, sans-serif;
+        font-size: 12;
+      }
+
+      /*Centers content*/
+      body {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      /* Ensure no text is touching edge of browser window*/
+      html {
+        padding: 20pt;
+      }
+
+
+    </style>
+
+  </head>
+  
+  <body>
+    <h1>Canada's Export Control List - Simplified</h1>
+    <p>A resource for easier navigation of the Canadian ECL. Use the buttons to expand individual sections and navigate easier through the full export control list.</p>
+    <p>Thank you for using this page, please consider whitelisting if you use an ad-blocker.
+    </p>
+  </body>
+
+
+
+  <body>
+    <div class="accordion-container">
+      <!-- First section -->
+      <button class="accordion">Section 1</button>
+      <div class="panel">
+        <p>
+          This is Section 1 content.
+        </p>
+        <button class="accordion">Subsection 1.1</button>
+        <div class="panel accordion-content">
+          <p>
+            This is Subsection 1.1 content.
+          </p>
+        </div>
+        <button class="accordion">Subsection 1.2</button>
+        <div class="panel accordion-content">
+          <p>
+            This is Subsection 1.2 content.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second section -->
+      <div>
+        <button class="accordion">1-1.A. Systems, Equipment and Components</button>
+        <div class="panel">
+          <div>
+            <button class="accordion">1-1.A.1. Components made from fluorinated compounds</button>
+            <div class="panel accordion-content">
+              <ol type="a">
+              <li>
+                Seals, gaskets, sealants or fuel bladders, specially designed for "aircraft" or aerospace use, made from more than 50% by weight of any of the materials specified by 1-1.C.9.b. or 1-1.C.9.c.;
+              </li>
+              <li>
+                Not used since 2015.
+              </li>
+              <li>
+                Not used since 2015.
+              </li>
+            </ol>
+            </div>
+          </div>
+          <div>
+            <button class="accordion">1-1.A.2. "Composite" structures or laminates</button>
+            <div class="panel accordion-content">
+              <ol type="a">
+              <li>
+                Made from any of the following:
+              </li>
+              <ol type="1">
+                <li>
+                  An organic "matrix" and "fibrous or filamentary materials" specified by 1-1.C.10.c. or 1-1.C.10.d.; or
+                </li>
+                <li>
+                  Prepregs or preforms specified by 1-1.C.10.e.;
+                    </li>
+                </ol>
+                <li>
+                    Made from a metal or carbon "matrix", and any of the following:
+                </li>
+                <ol>
+                    <li>
+                        Carbon "fibrous or filamentary materials" having all of the following:
+                        <ol type="a">
+                            <li>A "specific modulus" exceeding 10.15 x 106 m;</li>
+                            <li>A "specific tensile strength" exceeding 17.7 x 104 m; or</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Materials specified by 1-1.C.10.c.
+                    </li>
+                </ol>
+            </ol>
+            <div>
+              <button class="accordion">Note 1:</button>
+              <div class="panel accordion-content">
+                <p>1-1.A.2. does not apply to "composite" structures or laminates, made from epoxy resin impregnated carbon "fibrous or filamentary materials", for the repair of “civil aircraft” structures or laminates, having all of the following:
+                  <ol type="a">
+                    <li>An area not exceeding 1 m2;</li>
+                    <li>A length not exceeding 2.5 m; and</li>
+                    <li>A width exceeding 15 mm.</li>
+                  </ol>
+                </p>
+              </div>
+            </div>
+            <div>
+              <button class="accordion">Note 2:</button>
+              <div class="panel accordion-content">
+                <p>
+                  1-1.A.2. does not apply to semi-finished items, specially designed for purely civilian applications as follows:
+                </p>
+              <ol type="a">
+                <li>Sporting goods;</li>
+                <li>Automotive industry;</li>
+                <li>Machine tool industry;</li>
+                <li>Medical applications.</li>
+              </ol>
+              </div>
+            </div>
+
+            <div>
+              <button class="accordion">Note 3:</button>
+              <div class="panel accordion-content">
+                <p>1-1.A.2.b.1. does not apply to semi-finished items containing a maximum of two dimensions of interwoven filaments and specially designed for applications as follows:</p>
+                <ol type="a">
+                  <li>Metal heat-treatment furnaces for tempering metals;</li>
+                  <li>Silicon boule production equipment.</li>
+                </ol>
+              </div>
+              </div>
+
+              <div>
+              <button class="accordion">Note 4:</button>
+              <div class="panel accordion-content">
+                <p>1-1.A.2 does not apply to finished items specially designed for a specific application.</p>
+              </div>
+              </div>
+
+              <div>
+              <button class="accordion">Note 5:</button>
+              <div class="panel accordion-content">
+                <p>1-1.A.2.b.1. does not apply to mechanically chopped, milled, or cut carbon “fibrous or filamentary materials” 25.0 mm or less in length.</p>
+              </div>
+              </div>
+          </div>
+            
+
+      </div>
+    </div>
+
+    <!-- Third section -->
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>
+        This is Section 3 content.
+      </p>
+    </div>
+
+    <script>
+      // Get all the accordion buttons
+      const accordionButtons = document.querySelectorAll(".accordion");
+
+      // Loop through the buttons and add a click event listener to each
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Toggle active class on the clicked button
+          this.classList.toggle("active");
+
+          // Get the panel associated with this button
+          const panel = this.nextElementSibling;
+
+          // Toggle the panel's display property
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
