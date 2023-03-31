@@ -9,9 +9,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta charset="UTF-8">
 
-
-    <title>Export Control List - Simplified</title>
+    <title>Export Control List &#x1F1E8;&#x1F1E6; Simplified</title>
     
     <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico"/>
 
@@ -50,7 +50,6 @@
 
       /* Rotate icon when button is active */
       button.accordion.active::before {
-        
         transform: rotate(45deg);
         content: "\2212";  /* Minus symbol */
         color: white;
@@ -98,7 +97,7 @@
 
       /*Centers content*/
       body {
-        max-width: 1000px;
+        max-width: 1500px;
         margin: auto;
       }
 
@@ -107,6 +106,7 @@
         padding: 20pt;
       }
 
+      /* Adds a space between main and footer*/
       main {
         padding-bottom: 80px;
       }
@@ -116,13 +116,19 @@
         /*background-color: #333;*/
         /*color: #fff;*/
         text-align: center;
-        padding: 20px;
+        font-size: 12px;
+        font-family: Roboto, sans-serif;
+        /*padding: 20px;*/
+        max-width: 800px;
         /*position: fixed;*/
         position: relative;
         height: 50px;
         bottom: 0;
         left: 0;
         width: 100%;
+        margin-left:auto;
+        margin-right:auto;
+        display: table;
       }      
 
 
@@ -138,14 +144,17 @@
 <main>
 
   <body>
-    <h1>Canada's Export Control List - Simplified</h1>
-    <p>A resource for easier navigation of the Canadian ECL. Use the "+" buttons to expand individual sections and navigate through the full export control list. If you experience any issues or want to see new features, please reply to this form 
+    <h1>Canada's Export Control List &nbsp;&#x1F1E8;&#x1F1E6;&nbsp; Simplified</h1>
+    <p>A resource for easier navigation of the Canadian ECL. Use the "+" buttons to expand individual sections and navigate through the full export control list. <br>If you experience any issues or want to see new features, please reply to this form 
       <a href="https://forms.gle/wMjY9FXB5MXua1k89">here.</a>
     </p>
-    <p>Thank you for using this page, please consider whitelisting if you use an ad-blocker.
-    </p>
+    <p>Thank you for using this page, please consider whitelisting if you use an ad-blocker.</p>
     
     <div>
+
+      <button class="accordion">Group 1 - Dual-Use List</button>
+      <div class="panel accordion-content">
+
       
       <button class="accordion">Category 1: Special Materials And Related Equipment</button>
       <div class="panel accordion-content">
@@ -634,6 +643,30 @@
       </div> <!-- -----------Category 2: Materials Processing--------------- -->
 
 
+
+
+    </div> <!-- --------------Group 1 - Dual-Use List ------------------- -->
+
+
+
+    <button class="accordion">Group 2 - Munitions List</button>
+    <div class="panel accordion-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- --------------Group 2 - Munitions List ------------------- -->
+
     </div>  <!-- --------------MAIN div------------------- -->
 
   
@@ -644,6 +677,7 @@
 </main>
 
     <footer>
+      <p>Please note that the information provided on this website is for general information purposes only and is not intended to provide legal or professional advice. While we make every effort to ensure the accuracy and completeness of the information presented, we cannot guarantee that the information is always current, correct, or complete. Users of this website are encouraged to verify any information they obtain from this website with the official Canadian Export Control List or other official sources.</p>
       <p><a href="privacy.html"><i>Privacy Policy</i></a></p>
     </footer>
 
