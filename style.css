@@ -1,0 +1,294 @@
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+background-color: #f2f2f2;
+color: #0d0d0d;
+font-family: Roboto, sans-serif;
+font-size: 16px;
+cursor: pointer;
+padding: 12px;
+width: 100%;
+text-align: left;
+border: none;
+outline: none;
+transition: 0.4s;
+margin-bottom: 5px;
+border-radius: 5px;
+z-index: 1;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active,
+button.accordion:hover {
+background-color: #d9d9d9;
+}
+
+
+button.accordion::before {
+content: '\002B';  /* Plus symbol */
+color: #777;
+float: left;
+margin-right: 10px;
+transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate icon when button is active */
+button.accordion.active::before {
+transform: rotate(45deg);
+content: "\2212";  /* Minus symbol */
+color: white;
+float: left;
+margin-right: 10px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+padding: 0 18px;
+background-color: #fff;
+display: none;
+border-radius: 5px;
+}
+
+/* Style the accordion content */
+.accordion-content {
+padding: 18px;
+}
+
+/* Set max-width for accordion container */
+.accordion-container {
+max-width: 1000px;
+margin: 0 auto;
+}
+
+h1 {
+color: #1a1a1a;
+font-family: Roboto Slab, sans-serif;
+font-size: 25;
+}
+
+ol,li {
+color: #1a1a1a;
+font-family: Roboto, sans-serif;
+font-size: 12;
+margin: 6px;
+}
+
+ul {
+color: #1a1a1a;
+font-family: Roboto, sans-serif;
+font-size: 12;
+margin: 6px;
+list-style-type: none;
+}
+
+p {
+color: #1a1a1a;
+font-family: Roboto, sans-serif;
+font-size: 12;
+}
+
+/*Centers content*/
+body {
+padding-top: 30px;
+max-width: 1500px;
+margin: auto;
+/*background: #708090;*/
+}
+
+/* Ensure no text is touching edge of browser window*/
+html {
+padding: 20pt;
+scroll-padding-top: 70px;
+}
+
+/* Adds a space between main and footer*/
+main {
+padding-bottom: 50px;
+}
+
+
+footer {
+/*background-color: #333;*/
+/*color: #fff;*/
+text-align: center;
+font-size: 12px;
+font-family: Roboto, sans-serif;
+/*padding: 20px;*/
+max-width: 800px;
+/*position: fixed;*/
+position: relative;
+height: 50px;
+bottom: 0;
+left: 0;
+width: 100%;
+margin-left:auto;
+margin-right:auto;
+display: table;
+}      
+
+.centertitle {
+text-align: center;
+/*background-color: #C5DCD8;*/
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: #383838;
+color: #fff;
+/*padding-left: 20px;*/
+/*padding-right: 20px;*/
+height: 50px;
+z-index: 2;
+
+display: flex;
+/*justify-content: space-between;*/
+}
+
+.heading{
+color: #F1F1F1;
+font-family: Roboto, sans-serif;
+font-size: 12;
+text-align: center;
+flex-grow: 1;
+}
+
+
+/* ---------------------------------- everything below is for the hamburger menu ---------------------*/
+
+.toggler{
+  /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
+    z-index:2;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 40px;
+    padding: 0.6rem;
+  
+  /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
+
+.hamburger > div{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: white;
+    height: 2px;
+    width: 60%;
+    transition: all  0.4s ease;
+}
+
+/* CREATING THE TOP AND BOTTOM LINES : 
+TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
+
+.hamburger > div::before,
+.hamburger > div::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    background: white;
+    width: 100%;
+    height: 2px;
+    transition: all  0.4s ease;
+}
+
+.hamburger > div::after{
+    top: 10px;
+}
+
+/* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
+
+.toggler:checked + .hamburger > div{
+    background: rgba(0,0,0,0);
+}
+
+.toggler:checked + .hamburger > div::before{
+    top: 0;
+    transform: rotate(45deg);
+    background: #FCF8E8;
+}
+
+/* AND ROTATING THE TOP AND BOTTOM LINES :  */
+
+.toggler:checked + .hamburger > div::after{
+    top: 0;
+    transform: rotate(135deg);
+    background: #FCF8E8;
+}
+
+
+/* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
+
+.menu{
+    background: #5D697A;
+    width: 0%;
+    height: 100vh;
+  
+  /* APPLYING TRANSITION TO THE MENU :  */
+  
+    transition: all 0.4s ease;
+}
+
+/* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
+
+.toggler:checked ~ .menu{
+    width: 25%;
+}
+
+
+/* STYLING THE LIST :  */
+
+.menu >  div > ul{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    padding-left: 10px;
+  
+  /* HIDDEN INITIALLY  :  */
+  
+    visibility: hidden;
+}
+
+.menu > div > ul > li{
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.menu > div > ul > li > a {
+    color: #F1F1F1;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+}
+
+/* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
+
+.toggler:checked ~ .menu > div > ul{
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+}
+
+.toggler:checked ~ .menu > div > ul > li > a:hover{
+    color: #FF5C5C;
+}
+

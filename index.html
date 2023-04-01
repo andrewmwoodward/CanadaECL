@@ -3,8 +3,8 @@
   <head>
     
     <!-- get the required files from 3rd party sources -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
-    <link rel="preload" href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- <link rel="preload" href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' crossorigin> -->
     <!-- use the font -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,157 +15,80 @@
     
     <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico"/>
 
-    <style>
-      /* Style the buttons that are used to open and close the accordion panel */
-      button.accordion {
-        background-color: #f2f2f2;
-        color: #0d0d0d;
-        font-family: Roboto, sans-serif;
-        font-size: 16px;
-        cursor: pointer;
-        padding: 12px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        transition: 0.4s;
-        margin-bottom: 5px;
-        border-radius: 5px;
-      }
+    <link rel="stylesheet" href="style.css">
 
-      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-      button.accordion.active,
-      button.accordion:hover {
-        background-color: #d9d9d9;
-      }
+    <script src="main.js"></script>
 
 
-      button.accordion::before {
-        content: '\002B';  /* Plus symbol */
-        color: #777;
-        float: left;
-        margin-right: 10px;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      /* Rotate icon when button is active */
-      button.accordion.active::before {
-        transform: rotate(45deg);
-        content: "\2212";  /* Minus symbol */
-        color: white;
-        float: left;
-        margin-right: 10px;
-      }
-
-      /* Style the accordion panel. Note: hidden by default */
-      div.panel {
-        padding: 0 18px;
-        background-color: #fff;
-        display: none;
-        border-radius: 5px;
-      }
-
-      /* Style the accordion content */
-      .accordion-content {
-        padding: 18px;
-      }
-      
-      /* Set max-width for accordion container */
-      .accordion-container {
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      h1 {
-        color: #1a1a1a;
-        font-family: Roboto Slab, sans-serif;
-        font-size: 25;
-      }
-
-      ol,li {
-        color: #1a1a1a;
-        font-family: Roboto, sans-serif;
-        font-size: 12;
-        margin: 6px;
-      }
-
-      ul {
-        color: #1a1a1a;
-        font-family: Roboto, sans-serif;
-        font-size: 12;
-        margin: 6px;
-        list-style-type: none;
-      }
-
-      p {
-        color: #1a1a1a;
-        font-family: Roboto, sans-serif;
-        font-size: 12;
-      }
-
-      /*Centers content*/
-      body {
-        max-width: 1500px;
-        margin: auto;
-      }
-
-      /* Ensure no text is touching edge of browser window*/
-      html {
-        padding: 20pt;
-      }
-
-      /* Adds a space between main and footer*/
-      main {
-        padding-bottom: 50px;
-      }
-      
-
-      footer {
-        /*background-color: #333;*/
-        /*color: #fff;*/
-        text-align: center;
-        font-size: 12px;
-        font-family: Roboto, sans-serif;
-        /*padding: 20px;*/
-        max-width: 800px;
-        /*position: fixed;*/
-        position: relative;
-        height: 50px;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        margin-left:auto;
-        margin-right:auto;
-        display: table;
-      }      
-
-
-    </style>
+    <!-- GOOGLE ADS -->
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6087659983027068"
      crossorigin="anonymous"></script>
+
 
   </head>
   
   
 
-<main>
+<body>
 
-  <body>
-    <h1>Canada's Export Control List &nbsp;&#x1F1E8;&#x1F1E6;&nbsp; Simplified</h1>
-    <p>&#x1F6A7;&nbsp;WORK IN PROGRESS&nbsp;&#x1F6A7;</p>
-    <p>A resource for easier navigation of the Canadian ECL. Use the "+" buttons to expand individual sections and navigate through the full export control list. <br>If you experience any issues or want to see new features, please reply to this form 
-      <a href="https://forms.gle/wMjY9FXB5MXua1k89">here.</a>
-    </p>
-    <p>Thank you for using this page, please consider whitelisting if you use an ad-blocker.</p>
+  <header>
+   
+
+<input type="checkbox" class="toggler">
+    
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <ul>
+                <li><a href='#Group-1'>Group 1 - Dual-Use List</a></li>
+                  <!--
+                    <li><a href='#Category-1'>Category 1: Special materials and related equipment</a></li>
+                    <li><a href='#Category-2' onclick="expandAccordionWithParents('Category-2')">Category 2: Materials processing</a></li>
+                    <li><a href='#Group-1'>Category 3: Electronics</a></li>
+                    <li><a href='#Group-1'>Category 4: Computers</a></li>
+                    <li><a href='#Group-1'>Category 5 - Part 1: Telecommunications</a></li>
+                    <li><a href='#Group-1'>Category 5 - Part 2: “Information security”</a></li>
+                    <li><a href='#Group-1'>Category 6: Sensors and “lasers”</a></li>
+                    <li><a href='#Group-1'>Category 7: Navigation and avionics</a></li>
+                    <li><a href='#Group-1'>Category 8: Marine</a></li>
+                    <li><a href='#Group-1'>Category 9: Aerospace and propulsion</a></li>
+                  -->
+                
+                <li><a href='#Group-2'>Group 2 - Munitions List</a></li>
+            </ul>
+        </div>
+    </div>
+
+     
+    <p class="heading">&#x1F6A7;&nbsp;SECTIONS ARE STILL GETTING ADDED&nbsp;&#x1F6A7;</p>
+
+  </header>
+
+
+  <main>
+    
+    <div class="centertitle">
+      <h1>Canada's Export Control List &nbsp;&#x1F1E8;&#x1F1E6;&nbsp; Simplified</h1>
+     
+      <!-- <p>&#x1F6A7;&nbsp;SECTIONS ARE STILL GETTING ADDED&nbsp;&#x1F6A7;</p> -->
+    </div>
+    
+    
+      <p><br>A resource for easier navigation of the Canadian ECL. Use the "+" buttons to expand individual sections and navigate through the full export control list. <br>If you experience any issues or want to see new features, please reply to this form 
+        <a href="https://forms.gle/wMjY9FXB5MXua1k89">here.</a>
+      </p>
+      <p>Thank you for using this page, please consider whitelisting if you use an ad-blocker.</p>
+    
+    
     
     <div>
 
-      <button class="accordion">Group 1 - Dual-Use List</button>
+      <button class="accordion" id="Group-1">Group 1 - Dual-Use List</button>
       <div class="panel accordion-content">
 
       
-      <button class="accordion">Category 1: Special Materials And Related Equipment</button>
+      <button class="accordion" id="Category-1">Category 1: Special Materials And Related Equipment</button>
       <div class="panel accordion-content">
 
 
@@ -951,12 +874,19 @@
       
 
       
-      <button class="accordion">Category 2: Materials Processing</button>
+      <button class="accordion" id="Category-2">Category 2: Materials Processing</button>
       <div class="panel accordion-content">
 
         <button class="accordion">1-2.A. Systems, Equipment and Components</button>
         <div class="panel accordion-content">
 
+          <p><i><strong>N.B.:</strong>
+            <br>For quiet running bearings, see 2-9. on the Munitions List.</i></p>
+
+          <button class="accordion">1-2.A.1. Anti-friction bearings, bearing systems and components, as follows:</button>
+          <div class="panel accordion-content">
+
+          </div>
 
 
         </div> <!-- -----------1-2.A. Systems, Equipment and Components----------- -->
@@ -993,7 +923,7 @@
 
 
 
-      <button class="accordion">Group 2 - Munitions List</button>
+      <button class="accordion" id="Group-2">Group 2 - Munitions List</button>
       <div class="panel accordion-content">
 
 
@@ -1012,11 +942,6 @@
       </div> <!-- --------------Group 2 - Munitions List ------------------- -->
 
     </div>  <!-- --------------MAIN div------------------- -->
-
-  
-  <div>
-    
-  </div>
 
 </main>
 
