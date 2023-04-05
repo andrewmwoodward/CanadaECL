@@ -1,7 +1,41 @@
+/* --------- LIGHT DARK TESTING ------------ */
+
+body {
+  
+  /* Color variables */
+
+  --text-light:#737373;
+  --text-dark:#353535;
+
+  --bg-mainpage:#f8f9fa;
+  --bg-accordianbutton:#dee2e6;
+  --bg-accordianhover:#ced4da;
+  
+  background-color: var(--bg-mainpage);
+
+  padding-top: 30px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.dark {
+  --text-light:#CBD2D9;
+  --text-dark:#E4E7EB;
+
+  --bg-mainpage:#1F2933;
+  --bg-accordianbutton:#323F4B;
+  --bg-accordianhover:#3E4C59;
+  
+}
+
+
+
+/* --------- ACCORDIAN STYLINGS ------------ */
+
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
-background-color: #f2f2f2;
-color: #0d0d0d;
+background-color: var(--bg-accordianbutton);
+color: var(--text-dark);
 font-family: Roboto, sans-serif;
 font-size: 16px;
 cursor: pointer;
@@ -19,7 +53,7 @@ z-index: 1;
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active,
 button.accordion:hover {
-background-color: #d9d9d9;
+background-color: var(--bg-accordianhover);
 }
 
 
@@ -43,7 +77,7 @@ margin-right: 10px;
 /* Style the accordion panel. Note: hidden by default */
 div.panel {
 padding: 0 18px;
-background-color: #fff;
+background-color: var(--bg-mainpage);
 display: none;
 border-radius: 5px;
 }
@@ -59,45 +93,43 @@ max-width: 1000px;
 margin: 0 auto;
 }
 
+/* --------- Main html objects style ------------ */
+
 h1 {
-color: #1a1a1a;
+color: var(--text-dark);
 font-family: Roboto Slab, sans-serif;
 font-size: 25;
 }
 
 ol,li {
-color: #1a1a1a;
-font-family: Roboto, sans-serif;
+color: var(--text-dark);
 font-size: 12;
 margin: 6px;
 }
 
 ul {
-color: #1a1a1a;
-font-family: Roboto, sans-serif;
+color: var(--text-dark);
 font-size: 12;
 margin: 6px;
 list-style-type: none;
 }
 
 p {
-color: #1a1a1a;
-font-family: Roboto, sans-serif;
+color: var(--text-dark);
 font-size: 12;
 }
 
-/*Centers content*/
-body {
-padding-top: 30px;
-max-width: 1500px;
-margin: auto;
-/*background: #708090;*/
+
+a {
+    color: var(--text-light);
 }
+
 
 /* Ensure no text is touching edge of browser window*/
 html {
 padding: 20pt;
 scroll-padding-top: 70px;
+font-family: Roboto, sans-serif;
 }
 
 /* Adds a space between main and footer*/
@@ -107,8 +139,7 @@ padding-bottom: 50px;
 
 
 footer {
-/*background-color: #333;*/
-/*color: #fff;*/
+
 text-align: center;
 font-size: 12px;
 font-family: Roboto, sans-serif;
