@@ -304,6 +304,10 @@ button {
 }
 
 
+table, th, td {
+    border:1px solid #ddd!important
+}
+
 
 /* ---------------------------------- everything below is for the hamburger menu ---------------------*/
 
