@@ -202,7 +202,7 @@ ul {
 color: var(--text-dark);
 font-size: 12;
 margin: 6px;
-list-style-type: none;
+/*list-style-type: none;*/
 }
 
 p {
@@ -307,6 +307,14 @@ button {
 table, th, td {
     border:1px solid #ddd!important
 }
+
+
+.noNumberList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 
 /* ---------------------------------- everything below is for the hamburger menu ---------------------*/
