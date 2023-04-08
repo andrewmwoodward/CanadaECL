@@ -309,6 +309,11 @@ table, th, td {
 }
 
 
+.table {
+    color: var(--text-dark);
+}
+
+
 .noNumberList {
     list-style-type: none;
     padding: 0;
