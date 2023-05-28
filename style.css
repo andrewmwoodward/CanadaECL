@@ -309,6 +309,33 @@ button {
     z-index: 4;
 }
 
+/* button used for list selection on index page */
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.large-button{
+    padding: 10px 20px;
+    font-size: 24px;
+    text-align: center;
+    background-color: var(--bg-accordianbutton);
+    color: var(--text-dark);
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.large-button:hover{
+    background-color: var(--bg-accordianhover);
+}
+
+
 
 table, th, td {
     border:1px solid #ddd!important
