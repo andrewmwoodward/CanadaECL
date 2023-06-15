@@ -353,6 +353,15 @@ table, th, td {
     margin: 0;
 }
 
+.note {
+    color: var(--text-dark);
+    font-size: 12;
+    font-style: italic;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
 
 
 /* ---------------------------------- everything below is for the hamburger menu ---------------------*/
@@ -447,12 +456,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   /* APPLYING TRANSITION TO THE MENU :  */
   
     transition: all 0.4s ease;
+
 }
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 300PX , CREATING A SMOOTH EFFECT :  */
 
 .toggler:checked ~ .menu{
-    width: 300px;
+    width: 900px;
 }
 
 
@@ -464,21 +474,27 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     position: fixed;
     top: 70px;
     padding-left: 10px;
+    
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 70px); /* Set the maximum height to fit within viewport minus top offset */
   
   /* HIDDEN INITIALLY  :  */
   
     visibility: hidden;
 }
 
+
 .menu > div > ul > li{
     list-style: none;
     padding: 0.5rem;
+    
 }
 
 .menu > div > ul > li > a {
     color: #F1F1F1;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
+    
 }
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
@@ -491,5 +507,16 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .toggler:checked ~ .menu > div > ul > li > a:hover{
     color: #FF5C5C;
+}
+
+/* somehow adding this hid the scrollbar?*/
+.menu > div > ul {
+  /* ... Other styles ... */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.menu > div > ul::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit-based browsers */
 }
 
